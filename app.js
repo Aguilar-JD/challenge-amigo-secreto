@@ -47,6 +47,19 @@ function actualizarLista (){
 
 
 //Funcion para seleccionar un amigo aleatorio
+function sortearAmigo(){
+    // Verificar si hay amigos en la lista
+    if (amigos.length === 0) { // Si no hay amigos, mostrar un mensaje
+        alert("No hay amigos para sortear. Por favor, agrega nombres primero.");
+        return;
+        // Seleccionar un amigo aleatorio
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+        //obtener el nombre del amigo sorteado
+        let amigoSorteado = amigos[indiceAleatorio];
+        // Mostrar el nombre del amigo sorteado
+        let resultado = document.getElementById("resultado");
+        resultado.innerHTML = `El amigo secreto sorteado es: <strong>${amigoSorteado}</strong>`;
+}
 
 
 titulos("h1", "Bienvenido a el challenge amigo secreto");
