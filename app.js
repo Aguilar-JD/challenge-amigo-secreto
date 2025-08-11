@@ -33,10 +33,21 @@ function agregarAmigo() {
 }
 
 //funcionn para actualizar la lista de amigos en la interfaz
+function actualizarLista (){
+    let listaAmigos = document.getElementById("lista-amigos");
+    listaAmigos.innerHTML = ""; // Limpiar la lista actual
 
+    // Recorrer el array de amigos con un ciclo for
+    for(let i = 0; i < amigos.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = amigo [i]; // Asignar el nombre del amigo al elemento
+        listaAmigos.appendChild(li); // Agregar el elemento a la lista
+    };
+}
 
 
 //Funcion para seleccionar un amigo aleatorio
+
 
 titulos("h1", "Bienvenido a el challenge amigo secreto");
 titulos("h2", "Agrega los nombres y comienza el juego");
